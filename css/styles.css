@@ -1,0 +1,23 @@
+.nav-wrapper {
+    background-color: rgb(233, 200, 139);    
+}
+.nav-ul li a  {
+    color: rgb(185, 26, 26);  
+    font-weight: 600;  
+}
+.donate-button {
+    color: white !important;
+    font-weight: 400 !important;
+    background-color: rgb(185, 26, 26) !important;
+}
+.navbar-links ul {
+    text-align: center;
+    border: 1px solid rgb(185, 26, 26);
+}
+.navbar-links ul li {
+    display: inline;
+    float: none;
+}
+.navbar-links ul li a {
+    display: inline-block;
+}
