@@ -12,10 +12,12 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous">
-        </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.carousel');
+            M.Carousel.init(elems);
+        });
+    </script>
     <!-- Compiled and minified JavaScript -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -23,8 +25,6 @@
     <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-firestore.js"></script>
-
-    
     <script>
         // Your web app's Firebase configuration
         const firebaseConfig = {
@@ -67,16 +67,16 @@
     <div class="hide-on-large-only fake-div1 #212121 red darken-2 "></div>
     <div class="hide-on-med-and-up fake-div2 #212121 red darken-2 "></div>
 
-    
- <!-- <div class="carousel">
+
+    <!-- <div class="carousel">
         <a class="carousel-item" href="#one!"><img src="views/images/child6.jpg"></a>
         <a class="carousel-item" href="#two!"><img src="views/images/child7.jpg"></a>
         <a class="carousel-item" href="#three!"><img src="views/images/child8.jpg"></a>
         <a class="carousel-item" href="#four!"><img src="views/images/child4.jpg"></a>
         <a class="carousel-item" href="#five!"><img src="views/images/child5.jpg"></a>
   </div> -->
-  
+
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#config-web-app -->
-    <script src="ClientSideJs/main.js"></script>
+
