@@ -1,0 +1,20 @@
+<% include partials/header.ejs %>
+
+<p>Login With firebase</p>
+<button onclick={signInWithGoogle()}>
+    Sign in with Google
+</button>
+
+<script>
+    function signInWithGoogle(){
+        var googleAuthProvider= new firebase.auth.GoogleAuthProvider
+        firebase.auth().signInWithPopup(googleAuthProvider)
+        .then(function(data){
+            console.log(data)        
+        })
+        .catch(function(err){
+            console.log(error)
+        })
+    }
+</script>
+<% include partials/footer.ejs %>
