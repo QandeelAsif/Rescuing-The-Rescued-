@@ -21,3 +21,17 @@
 .navbar-links ul li a {
     display: inline-block;
 }
+/* About us */
+.about-us-div {
+    background-color: rgb(233, 200, 139); 
+    color: rgb(185, 26, 26);  
+    padding: 1px;
+    margin-bottom: 2%;
+    border: 1px solid rgb(185, 26, 26);
+}
+.background-div  {
+    background-color: #F7F2E9;
+}
+.about-us-para {
+    color: rgb(185, 26, 26); 
+}
