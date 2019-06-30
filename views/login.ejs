@@ -1,21 +1,12 @@
 <% include partials/header.ejs %>
 
-<p>Login With firebase</p>
-<button onclick={signInWithGoogle()}>
-    Sign in with Google
+<script src="./js/firebaseAuth.js"></script>
+
+<button id="google-signin" class="waves-effect waves-light btn red darken-1" onclick={signInWithGoogle()}>
+    Sign In With Google
 </button>
 
-<script>
-    function signInWithGoogle() {
-        var googleAuthProvider = new firebase.auth.GoogleAuthProvider
-        firebase.auth().signInWithPopup(googleAuthProvider)
-            .then(function (data) {
-                console.log(data)
-            })
-            .catch(function (err) {
-                console.log(error)
-            })
-    }
-</script>
-
+<button id="google-signout" class="waves-effect waves-light btn red darken-1" onclick={signOut()} style="display: none; visibility: hidden;">
+        Sign Out
+    </button>
 <% include partials/footer.ejs %>

@@ -27,12 +27,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(logger('dev'));
 
-//miidleware logging function
-function isAuthenticated(req,res,next){
-    
-}
 
-//ROUTES
+//==============RESTFULL ROUTES===========
 app.get("/", function (req, res) {
     res.render("home");
 })
@@ -41,9 +37,22 @@ app.get("/children", function (req, res) {
     res.render("show");
 });
 
-app.get("/login",isAuthenticated,function (req, res) {
+app.get("/donate", function (req, res) {
+    res.render("donate");
+});
+
+///==========AUTH ROUTES============
+app.get("/login", function (req, res) {
+    console.log("logging in");
     res.render("login");
 })
+//MIDDLEWARE AUTHENTICATION FUNCTION
+function isLoggedIn(req,res,next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    res.redirect("/login");
+}
 
 //LISTENER PORT
 app.listen(3000, function () {
