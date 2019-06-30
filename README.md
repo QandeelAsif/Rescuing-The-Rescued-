@@ -14,5 +14,6 @@ It handles the Client side code. Jquery will not work in node files(Here our nod
 Server Side Authentication:
 To bring in Data from firebase to your server you need to install these packages:
 npm install firebase-admin --save   
+npm install -g firebase-tools
 
 	

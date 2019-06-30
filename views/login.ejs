@@ -6,15 +6,15 @@
 </button>
 
 <script>
-    function signInWithGoogle(){
-        var googleAuthProvider= new firebase.auth.GoogleAuthProvider
+    function signInWithGoogle() {
+        var googleAuthProvider = new firebase.auth.GoogleAuthProvider
         firebase.auth().signInWithPopup(googleAuthProvider)
-        .then(function(data){
-            console.log(data)        
-        })
-        .catch(function(err){
-            console.log(error)
-        })
+            .then(function (data) {
+                console.log(data)
+            })
+            .catch(function (err) {
+                console.log(error)
+            })
     }
 </script>
 
