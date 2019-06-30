@@ -30,8 +30,13 @@
     border: 1px solid rgb(185, 26, 26);
 }
 .background-div  {
-    background-color: #F7F2E9;
+    background-color: rgb(247, 242, 233);
 }
 .about-us-para {
     color: rgb(185, 26, 26); 
+}
+.why-donate-div {
+    color: rgb(185, 26, 26);
+    background-color: rgb(233, 200, 139);
+    border: 1px solid rgb(185, 26, 26);
 }
