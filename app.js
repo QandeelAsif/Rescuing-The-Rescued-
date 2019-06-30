@@ -14,6 +14,8 @@ var firebaseAdmin=admin.initializeApp({
 //creating instance of express app
 var app = express();
 
+
+
 //seting things up
 app.set('view engine', 'ejs');
 //to include static files everytime the page loads
