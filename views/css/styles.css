@@ -1,4 +1,4 @@
-.nav-wrapper {
+.nav-wrapper,.nav-ul {
     background-color: rgb(233, 200, 139);    
 }
 .nav-ul li a  {
@@ -22,6 +22,7 @@
     display: inline-block;
 }
 /* About us */
+
 .about-us-div {
     background-color: rgb(233, 200, 139); 
     color: rgb(185, 26, 26);  
@@ -34,6 +35,9 @@
 }
 .about-us-para {
     color: rgb(185, 26, 26); 
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: underline;
 }
 .why-donate-div {
     color: rgb(185, 26, 26);
@@ -95,4 +99,26 @@
 .collapsible-header {
     display: block !important;
     font-size: 18px;
+}
+/* FOOTER */
+footer ul li{
+    display: inline;
+}
+.footer-link {
+    color: black; 
+    padding: 1.5%;
+}
+.footer-link:hover {
+    color: rgb(185, 26, 26);
+}
+.footer-div {
+    padding: 1%;
+    background-color: rgb(233, 200, 139);
+}
+.dot-div {
+    padding: 3px;
+    background-color: rgb(185, 26, 26)
+}
+.footer-copyright {
+    padding: 2%;
 }
