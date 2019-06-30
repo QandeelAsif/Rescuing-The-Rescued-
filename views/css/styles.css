@@ -40,3 +40,59 @@
     background-color: rgb(233, 200, 139);
     border: 1px solid rgb(185, 26, 26);
 }
+
+.text-marquee {
+    color: rgb(185, 26, 26);
+    background-color: rgb(233, 200, 139);
+    border: 1px solid rgb(185, 26, 26);
+    font-size: 18px;  
+}
+.haunting-text {
+    padding-left: 20%;
+    text-decoration: underline;
+}
+.missing-kid-links a {
+    color: rgb(185, 26, 26);
+}
+.missing-kid-links a:hover {
+    color: gray;
+}
+.collapsible-header {
+    color: rgb(185, 26, 26);
+    font-weight: 500;
+}
+.collapsible-body {
+    color: gray;
+}
+.missing-kid-2 {
+    width:350px;
+    height: 240px;
+}
+.missing-kid-3 {
+    width:400px;
+    height: 290px;
+}
+.missing-kid-4 {
+    width:400px;
+    height: 250px;
+}
+.missing-kid-5 {
+    width:400px;
+    height: 290px;
+}
+.missing-kid-6 {
+    width:400px;
+    height: 290px;
+}
+.missing-kid-7 {
+    width:400px;
+    height: 290px;
+}
+.missing-kid-8 {
+    width:400px;
+    height: 290px;
+}
+.collapsible-header {
+    display: block !important;
+    font-size: 18px;
+}
