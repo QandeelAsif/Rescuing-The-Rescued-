@@ -34,7 +34,7 @@ app.get("/", function (req, res) {
 })
 
 app.get("/children", function (req, res) {
-    res.render("show");
+    res.render("index");
 });
 
 app.get("/donate", function (req, res) {
