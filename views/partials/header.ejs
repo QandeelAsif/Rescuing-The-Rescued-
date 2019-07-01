@@ -32,8 +32,14 @@
             M.ScrollSpy.init(elems);
         });
 
-
-
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.modal');
+            M.Modal.init(elems);
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.datepicker');
+            M.Datepicker.init(elems);
+        });
     </script>
     <!-- Compiled and minified JavaScript -->
 
@@ -59,6 +65,7 @@
         const auth = firebase.auth();
         const db = firebase.firestore();
     </script>
+    <script src="./js/database.js"></script>
 </head>
 
 <body>
@@ -71,7 +78,7 @@
                     <ul class=" nav-ul ">
                         <li><a href="">Report Case</a></li>
                         <li><a href="">Find Helpers</a></li>
-                        <li><a href="">Chidren</a></li>
+                        <li><a href="/children">Chidren</a></li>
                         <li><a href="/login">Signup</a></li>
                         <li><a class="waves-effect waves-light btn-large donate-button ">Donate</a></li>
                     </ul>
@@ -81,16 +88,3 @@
     </header>
     <div class="hide-on-large-only fake-div1 #212121 red darken-2 "></div>
     <div class="hide-on-med-and-up fake-div2 #212121 red darken-2 "></div>
-
-
-    <!-- <div class="carousel">
-        <a class="carousel-item" href="#one!"><img src="views/images/child6.jpg"></a>
-        <a class="carousel-item" href="#two!"><img src="views/images/child7.jpg"></a>
-        <a class="carousel-item" href="#three!"><img src="views/images/child8.jpg"></a>
-        <a class="carousel-item" href="#four!"><img src="views/images/child4.jpg"></a>
-        <a class="carousel-item" href="#five!"><img src="views/images/child5.jpg"></a>
-  </div> -->
-
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#config-web-app -->

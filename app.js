@@ -34,12 +34,17 @@ app.get("/", function (req, res) {
 })
 
 app.get("/children", function (req, res) {
-    res.render("show");
+    res.render("children");
 });
 
 app.get("/donate", function (req, res) {
     res.render("donate");
 });
+
+app.get("/show", function (req, res) {
+    res.render("show");
+});
+
 
 ///==========AUTH ROUTES============
 app.get("/login", function (req, res) {

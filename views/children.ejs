@@ -1,0 +1,44 @@
+<% include partials/header.ejs %>
+<script src="js/database.js"></script>
+<br>
+<div class="center-align">
+    <h4 class="child-found-h4">Children Cases</h4><br>
+    <a class="btn-floating btn-large red darken-2 pulse modal-trigger" data-target="case-modal"><i
+            class="material-icons">add</i></a><br>
+</div>
+
+<br>
+<div class="container">
+    <div class="row" id="child-cases-div">
+        <!-- Cases will show up here -->
+    </div>
+</div>
+
+<!-- CASE DETAILS MODAL -->
+<div id="case-modal" class="modal">
+    <div class="modal-content">
+        <h4>Add Case Details</h4><br />
+        <form id="case-form">
+            <div class="input-field">
+                <input type="text" id="child-name" placeholder="Enter name" name="name" required />
+            </div>
+            <div class="input-field">
+                <input type="number" id="child-age" placeholder="Enter age" name="age" required />
+            </div>
+            <div class="input-field">
+                <input type="text" class="date-picker" id="child-dob" placeholder="Enter Date Of Birth" name="dob"
+                    required />
+            </div>
+            <div class="input-field">
+                <input type="text" id="child-city" placeholder="Enter City " name="city" required />
+            </div>
+            <div class="input-field">
+                <input type="text" id="child-description" placeholder="Enter Description(if any)" name="description" />
+            </div>
+            <button type="submit" waves-effect waves-light btn red"> Save</button>
+        </form>
+    </div>
+</div>
+<script src="js/database.js"></script>
+
+<% include partials/footer.ejs %>

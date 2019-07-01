@@ -122,3 +122,19 @@ footer ul li{
 .footer-copyright {
     padding: 2%;
 }
+.child-found-h4 {
+    color: rgb(185, 26, 26);  
+    text-decoration: underline;
+}
+#data-wrapper {
+    padding-left: 1%;
+}
+.data-div {
+    background-color: rgb(207, 54, 54);  
+    color: white;
+    padding: 1% !important;
+}
+.data-text-div {
+    background-color: beige;  
+    padding: 1% !important; 
+}
