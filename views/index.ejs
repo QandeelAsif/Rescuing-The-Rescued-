@@ -1,0 +1,42 @@
+<% include partials/header.ejs %>
+
+<body class="welcome">
+    <span id="splash-overlay" class="splash"></span>
+    <span id="welcome" class="z-depth-4"></span>
+
+    <main class="valign-wrapper">
+      <span class="container grey-text text-lighten-1 ">
+  
+        <p class="flow-text"></p>
+        <h1 class="title grey-text text-lighten-3">Found but never rescued</h1>
+  
+        <blockquote class="flow-text">Angels that are yet too good for the society</blockquote>
+
+        <p id="report" class="flow-text">Report A New Case ></p>
+      </span>
+    </main>
+  
+    <div class="fixed-action-btn">
+      <a href="#message" class="modal-trigger btn btn-large btn-floating amber waves-effect waves-light">
+        <i class="large material-icons">message</i>
+      </a>
+    </div>
+  
+    <div id="message" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4>Contact</h4>
+        <p>coming soon...</p>
+      </div>
+      <div class="modal-footer">
+        <a href="" class="modal-action modal-close waves-effect btn-flat">close</a>
+      </div>
+    </div>
+  </body>
+
+  <script>
+  $(document).ready(function(){
+  $('.modal-trigger').leanModal();
+});
+  </script>
+
+<% include partials/footer.ejs %>
