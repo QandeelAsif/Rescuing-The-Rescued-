@@ -122,25 +122,22 @@ footer ul li{
 .footer-copyright {
     padding: 2%;
 }
-<<<<<<< HEAD
 .child-found-h4 {
-    color: rgb(185, 26, 26);  
-    text-decoration: underline;
+  color: rgb(185, 26, 26);  
+  text-decoration: underline;
 }
 #data-wrapper {
-    padding-left: 1%;
+  padding-left: 1%;
 }
 .data-div {
-    background-color: rgb(207, 54, 54);  
-    color: white;
-    padding: 1% !important;
+  background-color: rgb(207, 54, 54);  
+  color: white;
+  padding: 1% !important;
 }
 .data-text-div {
-    background-color: beige;  
-    padding: 1% !important; 
-}
-=======
-
+  background-color: beige;  
+  padding: 1% !important; 
+} 
 
 /* INDEX PAGE CSS */
 
@@ -166,8 +163,8 @@ body {
   
   /* start welcome animation */
   
-  body.welcome {
-    background: #d84315;
+  div.welcome {
+    background: rgb(185, 26, 26); 
     overflow: hidden;
     -webkit-font-smoothing: antialiased;
   }
@@ -189,7 +186,7 @@ body {
   }
   
   .welcome #welcome {
-    background: #b94f12 ;
+    background: rgb(185, 26, 26);
     width: 56px;
     height: 56px;
     position: absolute;
@@ -304,4 +301,7 @@ body {
       opacity: 0;
     }
   }
->>>>>>> 1ced86526c19833e7ddd067269f0b0fdc5e4eb48
+.report-case-link {
+  font-size: 20px;
+  cursor: pointer !important;
+}

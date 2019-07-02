@@ -1,6 +1,6 @@
-<% include partials/header.ejs %>
-
-<body class="welcome">
+<% include partials/header.ejs %>">
+<br>
+<div class="welcome">
     <span id="splash-overlay" class="splash"></span>
     <span id="welcome" class="z-depth-4"></span>
 
@@ -11,11 +11,10 @@
         <h1 class="title grey-text text-lighten-3">Found but never rescued</h1>
   
         <blockquote class="flow-text">Angels that are yet too good for the society</blockquote>
-
-        <p id="report" class="flow-text">Report A New Case ></p>
+  
       </span>
     </main>
-  
+    
     <div class="fixed-action-btn">
       <a href="#message" class="modal-trigger btn btn-large btn-floating amber waves-effect waves-light">
         <i class="large material-icons">message</i>
@@ -31,12 +30,48 @@
         <a href="" class="modal-action modal-close waves-effect btn-flat">close</a>
       </div>
     </div>
-  </body>
+  </div>
+<br>
 
+<br>
+<div class="container">
+    <div class="row" id="child-cases-div">
+        <!-- Cases will show up here -->
+    </div>
+</div>
+
+<!-- CASE DETAILS MODAL -->
+<div id="case-modal" class="modal">
+    <div class="modal-content">
+        <h4>Add Case Details</h4><br />
+        <form id="case-form">
+            <div class="input-field">
+                <input type="text" id="child-name" placeholder="Enter name" name="name" required />
+            </div>
+            <div class="input-field">
+                <input type="number" id="child-age" placeholder="Enter age" name="age" required />
+            </div>
+            <div class="input-field">
+                <input type="text" class="date-picker" id="child-dob" placeholder="Enter Date Of Birth" name="dob"
+                    required />
+            </div>
+            <div class="input-field">
+                <input type="text" id="child-city" placeholder="Enter City " name="city" required />
+            </div>
+            <div class="input-field">
+                <input type="text" id="child-description" placeholder="Enter Description(if any)" name="description" />
+            </div>
+            <button type="submit" class="waves-effect waves-light btn red"> Save</button>
+        </form>
+    </div>
+</div>
+<script src="js/database.js"></script>
   <script>
-  $(document).ready(function(){
-  $('.modal-trigger').leanModal();
-});
+
+document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.modal-trigger');
+            M.leanModal.init(elems);
+        });
   </script>
 
 <% include partials/footer.ejs %>

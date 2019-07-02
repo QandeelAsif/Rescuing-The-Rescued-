@@ -31,24 +31,25 @@ app.use(logger('dev'));
 //==============RESTFULL ROUTES===========
 app.get("/", function (req, res) {
     res.render("home");
-})
+});
 
 app.get("/children", function (req, res) {
-<<<<<<< HEAD
-    res.render("children");
-=======
     res.render("index");
->>>>>>> 1ced86526c19833e7ddd067269f0b0fdc5e4eb48
 });
 
 app.get("/donate", function (req, res) {
     res.render("donate");
 });
-
-app.get("/show", function (req, res) {
+app.get("/campgrounds/id", function (req, res) {
     res.render("show");
 });
 
+app.get("/new", function (req, res) {
+    res.render("new");
+});
+app.get("/show", function (req, res) {
+    res.render("show");
+})
 
 ///==========AUTH ROUTES============
 app.get("/login", function (req, res) {

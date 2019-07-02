@@ -23,7 +23,7 @@ function createCase(doc) {
         <div class="card-content">
             <span class="card-title">${doc.data().name}</span>
             <p class="divider"></p><br>
-            <a href="/show" class="waves-effect waves-light btn red darken-2" id="more-info ">More Info</a>
+            <a href="" class="waves-effect waves-light btn red darken-2" id="more-info ">More Info</a>
         </div>
     </div>
 </div>`
