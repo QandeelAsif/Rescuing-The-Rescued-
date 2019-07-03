@@ -33,8 +33,8 @@ app.get("/", function (req, res) {
     res.render("home");
 });
 
-app.get("/children", function (req, res) {
-    res.render("index");
+app.get("/child", function (req, res) {
+    res.render("indexx");
 });
 
 app.get("/donate", function (req, res) {
@@ -44,8 +44,8 @@ app.get("/campgrounds/id", function (req, res) {
     res.render("show");
 });
 
-app.get("/new", function (req, res) {
-    res.render("new");
+app.get("/children/new", function (req, res) {
+    res.render("children/new");
 });
 app.get("/show", function (req, res) {
     res.render("show");

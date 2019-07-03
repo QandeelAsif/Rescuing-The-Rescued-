@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Rescuing The Rescued</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css">
+    <link type="text/css" rel="stylesheet" media="screen" href="css/styles.css">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -61,9 +61,6 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-        // make auth and firestore refrences
-        const auth = firebase.auth();
-        const db = firebase.firestore();
     </script>
 </head>
 
@@ -77,9 +74,9 @@
                     <ul class=" nav-ul ">
                         <li><a href="">Report Case</a></li>
                         <li><a href="">Find Helpers</a></li>
-                        <li><a href="/children">Chidren</a></li>
+                        <li><a href="/child">Chidren</a></li>
                         <li><a href="/login">Signup</a></li>
-                        <li><a class="waves-effect waves-light btn-large donate-button ">Donate</a></li>
+                        <li><a href="/donate" class="waves-effect waves-light btn-large donate-button ">Donate</a></li>
                     </ul>
                 </div>
             </nav>

@@ -1,4 +1,4 @@
-<% include partials/header.ejs %>">
+<% include partials/header.ejs %>
 <br>
 <div class="welcome">
     <span id="splash-overlay" class="splash"></span>
@@ -33,6 +33,13 @@
   </div>
 <br>
 
+<div class="center-align">
+  <h4 class="child-found-h4">Children Cases</h4><br>
+  <a href="/children/new" class="btn-floating btn-large red darken-2 pulse"><i
+          class="material-icons">add</i></a><br>
+</div>
+
+
 <br>
 <div class="container">
     <div class="row" id="child-cases-div">
@@ -65,13 +72,4 @@
         </form>
     </div>
 </div>
-<script src="js/database.js"></script>
-  <script>
-
-document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.modal-trigger');
-            M.leanModal.init(elems);
-        });
-  </script>
-
 <% include partials/footer.ejs %>
