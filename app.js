@@ -42,6 +42,9 @@ app.get("/donate", function (req, res) {
 });
 app.get("/campgrounds/id", function (req, res) {
     res.render("show");
+
+
+    
 });
 
 app.get("/children/new", function (req, res) {
