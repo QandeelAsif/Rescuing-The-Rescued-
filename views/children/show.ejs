@@ -1,4 +1,4 @@
-<% include partials/header.ejs %>
+<% include ../partials/header.ejs %>
 <br>
 <br>
 <div class="container">
@@ -9,25 +9,30 @@
     </div>
 </div>
 </div>
+
+
 <div class="container data-wrapper">
     <div class="row">
-        <div class="col l2 m3 s3 offset-l2 offset-m1 offset-s1 data-div"><span>Name: </span></div>
+
+        
+        <p></p>
+        <div class="col l2 m3 s3 offset-l2 offset-m1 offset-s1 data-div"><span>Name:<%=name%> </span></div>
         <div class="col l6 m6 s5 data-text-div"><span id="data-child-name"></span><br></div>
     </div>
     <div class="row">
-        <div class="col l2 m3 s3 offset-l2 offset-m1 offset-s1 data-div"><span>Child Age:</span></div>
+        <div class="col l2 m3 s3 offset-l2 offset-m1 offset-s1 data-div"><span>Child Age:<%=age%></span></div>
         <div class="col l6 m6 s5 data-text-div" ><span id="data-child-age"></span><br></div>
     </div>
     <div class="row">
-        <div class="col l2 m3 s3 offset-l2 offset-m1 offset-s1 data-div"><span>Child DOB :</span></div>
+        <div class="col l2 m3 s3 offset-l2 offset-m1 offset-s1 data-div"><span>Child DOB :<%=dob%></span></div>
         <div class="col l6 m6 s5 data-text-div"><span id="data-child-dob"></span><br></div>
     </div>
     <div class="row">
-        <div class="col l2 m3 s3 offset-l2 offset-m1 offset-s1 data-div"><span>Child City :</span></div>
+        <div class="col l2 m3 s3 offset-l2 offset-m1 offset-s1 data-div"><span>Child City :<%=city%></span></div>
         <div class="col l6 m6 s5 data-text-div"><span id="data-child-city"></span><br></div>
     </div>
     <div class="row">
-        <div class="col l2 m3 s3 offset-l2 offset-m1 offset-s1 data-div"><span>Summary :</span></div>
+        <div class="col l2 m3 s3 offset-l2 offset-m1 offset-s1 data-div"><span>Summary :<%=desc%></span></div>
         <div class="col l5 m6 s5 data-text-div"><span id="data-child-summary"></span><br></div>
     </div>
 </div>
@@ -39,4 +44,4 @@
 
 </script>
 
-<% include partials/footer.ejs %>
+<% include ../partials/footer.ejs %>

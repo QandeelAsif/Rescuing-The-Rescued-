@@ -11,6 +11,7 @@ var firebaseAdmin=admin.initializeApp({
     databaseURL:'https://rescuing-the-rescued.firebaseio.com'
 })
 
+var db=firebaseAdmin.firestore();
 //creating instance of express app
 var app = express();
 
@@ -35,17 +36,53 @@ app.get("/", function (req, res) {
 
 app.get("/child", function (req, res) {
     res.render("indexx");
+   // res.render("indexx");
 });
 
 app.get("/donate", function (req, res) {
     res.render("donate");
 });
-app.get("/campgrounds/id", function (req, res) {
-    res.render("show");
-
-
+// app.get("/children/:id", function (req, res) {
+//     res.render("show");
     
+// });
+
+app.get('/children/:id', async(req, res, next) => {
+    try {
+        const id = req.params.id;
+        if (!id) throw new Error('id is blank');
+        const note = await db.collection('children').doc(id).get();
+        if (!note.exists) {
+            throw new Error('note does not exists');
+        }
+        //var pass=JSON.stringify(note._fieldsProto);
+        //console.log(pass);
+
+        var pass=JSON.stringify(note);
+        var name=note._fieldsProto.name.stringValue;
+        console.log(name)
+        var age=note._fieldsProto.age.stringValue;
+        var dob=note._fieldsProto.dob.stringValue;
+        var city=note._fieldsProto.city.stringValue;
+        var desc=note._fieldsProto.description.stringValue;
+
+        res.render("children/show",{name:name,age:age,dob:dob,city:city,desc:desc});
+    } catch(e) {
+        next(e);
+    }
+
+//     serverRef = db.collection('children');
+// getDocs = serverRef.get()
+// .then(querySnapshot => {
+//     if (querySnapshot.empty) {
+//         res.send("NO SERVERS AVAILABLE");
+//     } else {
+//         var docs = querySnapshot.docs.map(doc => doc.data());
+//         console.log('Document data:', docs);
+//         res.end(JSON.stringify({kind: 'chal ja mere', servers: docs}));
+//     }
 });
+
 
 app.get("/children/new", function (req, res) {
     res.render("children/new");

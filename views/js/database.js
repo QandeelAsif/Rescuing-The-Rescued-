@@ -13,7 +13,9 @@ function createCase(doc) {
         <div class="card-content">
             <span class="card-title">${doc.data().name}</span>
             <p class="divider"></p><br>
-            <span class="" id="${doc.id}"><a href="/show" class="waves-effect waves-light btn red darken-2 more-info">More Info</a></span>
+            <span class="" id="${doc.id}">
+            <a href="/children/${doc.id}"  class="waves-effect waves-light btn red darken-2 more-info" onclick="">More Info</a>
+            </span>
         </div>
     </div>
 </div>`
