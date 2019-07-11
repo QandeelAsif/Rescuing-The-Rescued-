@@ -1,12 +1,13 @@
 <% include partials/header.ejs %>
 <br>
 <script src="./js/firebaseAuth.js"></script>
-
+<div>
 <button id="google-signin" class="waves-effect waves-light btn red darken-2" onclick={signInWithGoogle()}>
     Sign In With Google
 </button>
 <button id="google-signout" class="waves-effect waves-light btn red darken-2" onclick={signOut()} style="display: none; visibility: hidden;">
         Sign Out
 </button>
+</div>
 <br><br>
 <% include partials/footer.ejs %>

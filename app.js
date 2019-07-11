@@ -1,17 +1,17 @@
 //importing packages
-var express         =require("express"),
-    logger          =require("morgan"),
-    bodyParser      =require("body-parser"),
-    admin           =require("firebase-admin"),
-    
-    serviceAccount  =require('./rescuing-the-rescued-firebase-adminsdk-9t73e-dcf8a33610.json');
+var express = require("express"),
+    logger = require("morgan"),
+    bodyParser = require("body-parser"),
+    admin = require("firebase-admin"),
 
-var firebaseAdmin=admin.initializeApp({
+    serviceAccount = require('./rescuing-the-rescued-firebase-adminsdk-9t73e-dcf8a33610.json');
+
+var firebaseAdmin = admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL:'https://rescuing-the-rescued.firebaseio.com'
+    databaseURL: 'https://rescuing-the-rescued.firebaseio.com'
 })
 
-var db=firebaseAdmin.firestore();
+var db = firebaseAdmin.firestore();
 //creating instance of express app
 var app = express();
 
@@ -21,7 +21,7 @@ var app = express();
 app.set('view engine', 'ejs');
 //to include static files everytime the page loads
 app.use(express.static('views'));
-app.set('views',__dirname+'/views');
+app.set('views', __dirname + '/views');
 //to get posted data in json format
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -36,18 +36,18 @@ app.get("/", function (req, res) {
 
 app.get("/child", function (req, res) {
     res.render("indexx");
-   // res.render("indexx");
+    // res.render("indexx");
 });
 
 app.get("/donate", function (req, res) {
     res.render("donate");
 });
-// app.get("/children/:id", function (req, res) {
-//     res.render("show");
-    
-// });
+app.get("/new", function (req, res) {
+    res.render("new");
 
-app.get('/children/:id', async(req, res, next) => {
+});
+
+app.get('/children/:id', async (req, res, next) => {
     try {
         const id = req.params.id;
         if (!id) throw new Error('id is blank');
@@ -58,38 +58,32 @@ app.get('/children/:id', async(req, res, next) => {
         //var pass=JSON.stringify(note._fieldsProto);
         //console.log(pass);
 
-        var pass=JSON.stringify(note);
-        var name=note._fieldsProto.name.stringValue;
+        var pass = JSON.stringify(note);
+        var name = note._fieldsProto.name.stringValue;
         console.log(name)
-        var age=note._fieldsProto.age.stringValue;
-        var dob=note._fieldsProto.dob.stringValue;
-        var city=note._fieldsProto.city.stringValue;
-        var desc=note._fieldsProto.description.stringValue;
-
-        res.render("children/show",{name:name,age:age,dob:dob,city:city,desc:desc});
-    } catch(e) {
+        var age = note._fieldsProto.age.stringValue;
+        var dob = note._fieldsProto.dob.stringValue;
+        var city = note._fieldsProto.city.stringValue;
+        var desc = note._fieldsProto.description.stringValue;
+        var url = note._fieldsProto.image.stringValue;
+        res.render("children/show", { name: name, age: age, dob: dob, city: city, desc: desc, url: url });
+    } catch (e) {
         next(e);
     }
 
-//     serverRef = db.collection('children');
-// getDocs = serverRef.get()
-// .then(querySnapshot => {
-//     if (querySnapshot.empty) {
-//         res.send("NO SERVERS AVAILABLE");
-//     } else {
-//         var docs = querySnapshot.docs.map(doc => doc.data());
-//         console.log('Document data:', docs);
-//         res.end(JSON.stringify({kind: 'chal ja mere', servers: docs}));
-//     }
+    //     serverRef = db.collection('children');
+    // getDocs = serverRef.get()
+    // .then(querySnapshot => {
+    //     if (querySnapshot.empty) {
+    //         res.send("NO SERVERS AVAILABLE");
+    //     } else {
+    //         var docs = querySnapshot.docs.map(doc => doc.data());
+    //         console.log('Document data:', docs);
+    //         res.end(JSON.stringify({kind: 'chal ja mere', servers: docs}));
+    //     }
 });
 
 
-app.get("/children/new", function (req, res) {
-    res.render("children/new");
-});
-app.get("/show", function (req, res) {
-    res.render("show");
-})
 
 ///==========AUTH ROUTES============
 app.get("/login", function (req, res) {
@@ -97,8 +91,8 @@ app.get("/login", function (req, res) {
     res.render("login");
 })
 //MIDDLEWARE AUTHENTICATION FUNCTION
-function isLoggedIn(req,res,next){
-    if(req.isAuthenticated()){
+function isLoggedIn(req, res, next) {
+    if (req.isAuthenticated()) {
         return next();
     }
     res.redirect("/login");

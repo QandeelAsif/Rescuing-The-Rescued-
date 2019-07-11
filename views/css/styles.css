@@ -305,3 +305,28 @@ body {
   font-size: 20px;
   cursor: pointer !important;
 }
+#case-form-container {
+  padding-right: 10%;
+  padding-left: 10%;
+}
+label {
+  font-size: 15px !important;
+  color: rgb(185, 26, 26) !important;
+}
+/* DONOR CARDS */
+.donor-card {
+  border: 2px solid rgb(240, 52, 52) ;
+}
+.donor-name {
+  font-weight: 400 !important;
+}
+.donor-contact,.donor-amount {
+  font-size: 17px !important ;
+}
+.donor-btn {
+  background: rgb(241, 192, 101) !important;
+}
+#donor-details-modal {
+  padding-left: 3% !important;
+  padding-right: 3% !important;
+}

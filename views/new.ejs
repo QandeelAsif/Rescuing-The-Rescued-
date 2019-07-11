@@ -1,0 +1,61 @@
+<% include partials/header.ejs %>
+<br>
+<div class="welcome">
+    <main class="valign-wrapper">
+        <span class="container grey-text text-lighten-1 center-align">
+            <h4 class="title grey-text text-lighten-3">Add Case Details</h4>
+        </span>
+    </main>
+
+</div>
+<!-- CASE DETAILS -->
+<div class="container " id="case-form-container">
+    <form id="case-form"><br>
+        <div class="input-field">
+            <label for="name">Name:</label>
+            <input type="text" id="child-name" placeholder="Enter name" name="name" required />
+        </div><br>
+        <div class="input-field">
+            <label for="name">Age:</label>
+            <input type="number" id="child-age" placeholder="Enter age" name="age" required />
+        </div><br>
+        <div class="input-field">
+            <label for="name">Date Of Birth:</label>
+            <input type="text" class="date-picker" id="child-dob" placeholder="Enter Date Of Birth" name="dob"
+                required />
+        </div><br>
+        <div class="input-field">
+            <label for="name">City:</label>
+            <input type="text" id="child-city" placeholder="Enter City " name="city" required />
+        </div><br>
+        <div class="input-field">
+            <label for="name">Description:</label>
+            <input type="text" id="child-description" placeholder="Enter Description(if any)" name="description" />
+        </div><br>
+        <div class="input-field">
+            <label for="name">Add Image Url:</label>
+            <input type="text" id="child-image" placeholder="Enter Image Url(if any)" name="url"
+                value="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"/>
+        </div>
+        <button type="submit" class="waves-effect waves-light btn red darken-2"><a href="/child"></a>Save</button>
+    </form>
+</div>
+<br><br>
+<script>
+
+    var caseForm = document.querySelector('#case-form')
+    caseForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        firebase.firestore().collection('children').add({
+            name: caseForm.name.value,
+            age: caseForm.age.value,
+            dob: caseForm.dob.value,
+            city: caseForm.city.value,
+            description: caseForm.description.value,
+            image: caseForm.url.value,
+        });
+        caseForm.reset()
+    });
+</script>
+
+<% include partials/footer.ejs %>
