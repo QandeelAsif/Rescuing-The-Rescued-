@@ -330,3 +330,21 @@ label {
   padding-left: 3% !important;
   padding-right: 3% !important;
 }
+/* SINGUP PART */
+
+#login-email,#login-password {
+      border-bottom: none !important;
+      box-shadow: none !important;
+      border: 1px solid #d1caca !important;  
+      margin-top: 3% !important;
+      border-radius: 5px !important;
+      padding-left: 3% !important;
+}
+.my-form {
+  border: 2px solid rgb(179, 173, 173);
+  margin: 5% !important;
+}
+.or {
+  padding-right: 3%;
+  padding-left: 3%;
+}

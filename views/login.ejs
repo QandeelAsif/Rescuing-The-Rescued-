@@ -1,13 +1,125 @@
 <% include partials/header.ejs %>
 <br>
-<script src="./js/firebaseAuth.js"></script>
-<div>
-<button id="google-signin" class="waves-effect waves-light btn red darken-2" onclick={signInWithGoogle()}>
-    Sign In With Google
-</button>
-<button id="google-signout" class="waves-effect waves-light btn red darken-2" onclick={signOut()} style="display: none; visibility: hidden;">
-        Sign Out
-</button>
-</div>
+
 <br><br>
-<% include partials/footer.ejs %>
+<div id="sign-in-stuff">
+    <div class="welcome center-align ">
+        <main class="valign-wrapper">
+            <span class="container grey-text text-lighten-1 ">
+                <h3 class="title grey-text text-lighten-3">Sign In</h3>
+            </span>
+        </main>
+    </div>
+
+    <!-- login div part1 -->
+    <div class="wallpaper #f5f5f5 grey lighten-4" id="login-div">
+        <div class="container #f5f5f5 grey lighten-4">
+            <br><br>
+            <div class="row ">
+                <div class="col l12 m12 s12 center-align ">
+                    <span>Kindly <a href="#" class="modal-trigger red-text darken-3"
+                            data-target="modal-register">Register</a> yourself first if you haven't yet.</span>
+
+                    <div class="row my-form">
+                        <form class="col s12 m12 l0" id="login-form">
+                            <div class="row  center-align ">
+                                <div class="input-field col s12 l6 offset-l3 text-area-div1">
+                                    <span><img src="https://img.icons8.com/android/24/000000/secured-letter.png"><input
+                                            id="login-email" type="email" class="validate" placeholder="Email or ID"
+                                            required></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12 l6 offset-l3">
+                                    <span><img src="https://img.icons8.com/metro/24/000000/lock-2.png"><input
+                                            id="login-password" type="password" class="validate" id="textarea1"
+                                            placeholder="Password" required></span>
+                                </div>
+                            </div>
+                            <div class="row error-div left-align red-text center-align"><span class="errorLogin"></span>
+                            </div>
+
+                            <div class="row">
+                                <div class="col s12">
+                                    <button type="submit"
+                                        class="waves-effect waves-light btn red darken-2">Login</button>
+                                    <span class="or"><b>OR</b></span>
+                                    <button id="google-signin" class="waves-effect waves-light btn red darken-2"
+                                        onclick={signInWithGoogle()}>
+                                        Sign In With Google
+                                    </button><br>
+                                </div>
+                            </div>
+
+                            <div>
+
+                            </div>
+
+                        </form>
+                    </div>
+                    <span class="red-text darken-3">Forget ID/Password?</span><br><br>
+                    <span>Need <a href="" class="red-text darken-3">help?</a></p>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <br><br>
+
+  </div>
+  </div>
+
+
+    <!-- SIGNOUT -->
+    <div id="sign-out-stuff">
+        <div class="welcome center-align ">
+            <main class="valign-wrapper">
+                <span class="container grey-text text-lighten-1 ">
+                    <h3 class="title grey-text text-lighten-3">You are Already Signed In.</h3>
+                </span>
+            </main>
+        </div>
+        <br>
+        <div class="center-align">
+
+            <button id="google-signout" class="waves-effect waves-light btn red darken-2" onclick={signOut()}>
+                Sign Out
+            </button>
+            <a href="/new" class="waves-effect waves-light btn red darken-2">
+                    Report Case
+            </a>
+
+                <a href="/donate" class="waves-effect waves-light btn red darken-2">
+                        Become Donor
+                </a>
+                <a href="/child" class="waves-effect waves-light btn red darken-2">
+                        See Children
+                </a>
+        </div>
+    </div>
+    <br><br>
+              <!-- REGISTER MODAL -->
+              <div id="modal-register" class="modal">
+                    <div class="modal-content">
+                        <h4>Sign up</h4><br />
+                        <form id="signup-form">
+                            <div class="input-field">
+                                <input type="email" id="signup-email" placeholder="Email address" required />
+                            </div>
+                            <div class="input-field">
+                                <input type="password" id="signup-password" placeholder="Choose password" required />
+                            </div>
+                            <div class="row error-div left-align red-text "><span class="errorSignup"></span></div>
+                            <div class="modal-footer">
+                                <button type="submit" class="waves-effect waves-light btn red darken-2">Sign up</button>
+                                <a href="#!" class="modal-close waves-effect red darken-2 btn">Close</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        <script src="./js/firebaseAuth.js"></script>
+        <% include partials/footer.ejs %>
