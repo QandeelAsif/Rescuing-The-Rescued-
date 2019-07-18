@@ -1,0 +1,350 @@
+.nav-wrapper,.nav-ul {
+    background-color: rgb(233, 200, 139);    
+}
+.nav-ul li a  {
+    color: rgb(185, 26, 26);  
+    font-weight: 600;  
+}
+.donate-button {
+    color: white !important;
+    font-weight: 400 !important;
+    background-color: rgb(185, 26, 26) !important;
+}
+.navbar-links ul {
+    text-align: center;
+    border: 1px solid rgb(185, 26, 26);
+}
+.navbar-links ul li {
+    display: inline;
+    float: none;
+}
+.navbar-links ul li a {
+    display: inline-block;
+}
+/* About us */
+
+.about-us-div {
+    background-color: rgb(233, 200, 139); 
+    color: rgb(185, 26, 26);  
+    padding: 1px;
+    margin-bottom: 2%;
+    border: 1px solid rgb(185, 26, 26);
+}
+.background-div  {
+    background-color: rgb(247, 242, 233);
+}
+.about-us-para {
+    color: rgb(185, 26, 26); 
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+.why-donate-div {
+    color: rgb(185, 26, 26);
+    background-color: rgb(233, 200, 139);
+    border: 1px solid rgb(185, 26, 26);
+}
+
+.text-marquee {
+    color: rgb(185, 26, 26);
+    background-color: rgb(233, 200, 139);
+    border: 1px solid rgb(185, 26, 26);
+    font-size: 18px;  
+}
+.haunting-text {
+    padding-left: 20%;
+    text-decoration: underline;
+}
+.missing-kid-links a {
+    color: rgb(185, 26, 26);
+}
+.missing-kid-links a:hover {
+    color: gray;
+}
+.collapsible-header {
+    color: rgb(185, 26, 26);
+    font-weight: 500;
+}
+.collapsible-body {
+    color: gray;
+}
+.missing-kid-2 {
+    width:350px;
+    height: 240px;
+}
+.missing-kid-3 {
+    width:400px;
+    height: 290px;
+}
+.missing-kid-4 {
+    width:400px;
+    height: 250px;
+}
+.missing-kid-5 {
+    width:400px;
+    height: 290px;
+}
+.missing-kid-6 {
+    width:400px;
+    height: 290px;
+}
+.missing-kid-7 {
+    width:400px;
+    height: 290px;
+}
+.missing-kid-8 {
+    width:400px;
+    height: 290px;
+}
+.collapsible-header {
+    display: block !important;
+    font-size: 18px;
+}
+/* FOOTER */
+footer ul li{
+    display: inline;
+}
+.footer-link {
+    color: black; 
+    padding: 1.5%;
+}
+.footer-link:hover {
+    color: rgb(185, 26, 26);
+}
+.footer-div {
+    padding: 1%;
+    background-color: rgb(233, 200, 139);
+}
+.dot-div {
+    padding: 3px;
+    background-color: rgb(185, 26, 26)
+}
+.footer-copyright {
+    padding: 2%;
+}
+.child-found-h4 {
+  color: rgb(185, 26, 26);  
+  text-decoration: underline;
+}
+#data-wrapper {
+  padding-left: 1%;
+}
+.data-div {
+  background-color: rgb(207, 54, 54);  
+  color: white;
+  padding: 1% !important;
+}
+.data-text-div {
+  background-color: beige;  
+  padding: 1% !important; 
+} 
+
+/* INDEX PAGE CSS */
+
+#report{
+    font-size: 1.5rem;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1 0 auto;
+  }
+  
+  h1.title,
+  .footer-copyright a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  
+  /* start welcome animation */
+  
+  div.welcome {
+    background: rgb(185, 26, 26); 
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .welcome .splash {
+    height: 0px;
+    padding: 0px;
+    border: 130em solid #ebab22de;
+    position: fixed;
+    left: 50%;
+    top: 100%;
+    display: block;
+    box-sizing: initial;
+    overflow: hidden;
+  
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards;
+  }
+  
+  .welcome #welcome {
+    background: rgb(185, 26, 26);
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards, hide 2s 2.9s ease forwards;
+  }
+  
+  /* moveIn */
+  .welcome header,
+  .welcome a.btn {
+    opacity: 1;
+    animation: moveIn 2s 3.1s ease forwards;
+  }
+  
+  @keyframes init {
+    0% {
+      width: 0px;
+      height: 0px;
+    }
+    100% {
+      width: 56px;
+      height: 56px;
+      margin-top: 0px;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes puff {
+    0% {
+      top: 100%;
+      height: 0px;
+      padding: 0px;
+    }
+    100% {
+      top: 50%;
+      height: 100%;
+      padding: 0px 100%;
+    }
+  }
+  
+  @keyframes borderRadius {
+    0% {
+      border-radius: 50%;
+    }
+    100% {
+      border-radius: 0px;
+    }
+  }
+  
+  @keyframes moveDown {
+    0% {
+      top: 50%;
+    }
+    50% {
+      top: 40%;
+    }
+    100% {
+      top: 100%;
+    }
+  }
+  
+  @keyframes moveUp {
+    0% {
+      background: #ebab22de;
+      top: 100%;
+    }
+    50% {
+      top: 40%;
+    }
+    100% {
+      top: 50%;
+      background: #ebab22de;
+    }
+  }
+  
+  @keyframes materia {
+    0% {
+      background: #ebab22de;
+    }
+    50% {
+      background: #ebab22de;
+      top: 26px;
+    }
+    100% {
+      background: #ebab22de;
+      width: 100%;
+      height: 64px;
+      border-radius: 0px;
+      top: 26px;
+    }
+  }
+  
+  @keyframes moveIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes hide {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+.report-case-link {
+  font-size: 20px;
+  cursor: pointer !important;
+}
+#case-form-container {
+  padding-right: 10%;
+  padding-left: 10%;
+}
+label {
+  font-size: 15px !important;
+  color: rgb(185, 26, 26) !important;
+}
+/* DONOR CARDS */
+.donor-card {
+  border: 2px solid rgb(240, 52, 52) ;
+}
+.donor-name {
+  font-weight: 400 !important;
+}
+.donor-contact,.donor-amount {
+  font-size: 17px !important ;
+}
+.donor-btn {
+  background: rgb(241, 192, 101) !important;
+}
+#donor-details-modal {
+  padding-left: 3% !important;
+  padding-right: 3% !important;
+}
+/* SINGUP PART */
+
+#login-email,#login-password {
+      border-bottom: none !important;
+      box-shadow: none !important;
+      border: 1px solid #d1caca !important;  
+      margin-top: 3% !important;
+      border-radius: 5px !important;
+      padding-left: 3% !important;
+}
+.my-form {
+  border: 2px solid rgb(179, 173, 173);
+  margin: 5% !important;
+}
+.or {
+  padding-right: 3%;
+  padding-left: 3%;
+}

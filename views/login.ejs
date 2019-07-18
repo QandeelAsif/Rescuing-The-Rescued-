@@ -68,55 +68,55 @@
 
         <br><br>
 
-  </div>
-  </div>
-
-
-    <!-- SIGNOUT -->
-    <div id="sign-out-stuff">
-        <div class="welcome center-align ">
-            <main class="valign-wrapper">
-                <span class="container grey-text text-lighten-1 ">
-                    <h3 class="title grey-text text-lighten-3">You are Already Signed In.</h3>
-                </span>
-            </main>
-        </div>
-        <br>
-        <div class="center-align">
-
-            <button id="google-signout" class="waves-effect waves-light btn red darken-2" onclick={signOut()}>
-                Sign Out
-            </button>
-            <a href="/new" class="waves-effect waves-light btn red darken-2">
-                    Report Case
-            </a>
-
-                <a href="/donate" class="waves-effect waves-light btn red darken-2">
-                        Become Donor
-                </a>
-        </div>
     </div>
-    <br><br>
-              <!-- REGISTER MODAL -->
-              <div id="modal-register" class="modal">
-                    <div class="modal-content">
-                        <h4>Sign up</h4><br />
-                        <form id="signup-form">
-                            <div class="input-field">
-                                <input type="email" id="signup-email" placeholder="Email address" required />
-                            </div>
-                            <div class="input-field">
-                                <input type="password" id="signup-password" placeholder="Choose password" required />
-                            </div>
-                            <div class="row error-div left-align red-text "><span class="errorSignup"></span></div>
-                            <div class="modal-footer">
-                                <button type="submit" class="waves-effect waves-light btn red darken-2">Sign up</button>
-                                <a href="#!" class="modal-close waves-effect red darken-2 btn">Close</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+</div>
 
-        <script src="./js/firebaseAuth.js"></script>
-        <% include partials/footer.ejs %>
+
+<!-- SIGNOUT -->
+<div id="sign-out-stuff">
+    <div class="welcome center-align ">
+        <main class="valign-wrapper">
+            <span class="container grey-text text-lighten-1 ">
+                <h3 class="title grey-text text-lighten-3">You are Already Signed In.</h3>
+            </span>
+        </main>
+    </div>
+    <br>
+    <div class="center-align">
+
+        <button id="google-signout" class="waves-effect waves-light btn red darken-2" onclick={signOut()}>
+            Sign Out
+        </button>
+        <a href="/new" class="waves-effect waves-light btn red darken-2">
+            Report Case
+        </a>
+
+        <a href="/donate" class="waves-effect waves-light btn red darken-2">
+            Become Donor
+        </a>
+    </div>
+</div>
+<br><br>
+<!-- REGISTER MODAL -->
+<div id="modal-register" class="modal">
+    <div class="modal-content">
+        <h4>Sign up</h4><br />
+        <form id="signup-form">
+            <div class="input-field">
+                <input type="email" id="signup-email" placeholder="Email address" required />
+            </div>
+            <div class="input-field">
+                <input type="password" id="signup-password" placeholder="Choose password" required />
+            </div>
+            <div class="row error-div left-align red-text "><span class="errorSignup"></span></div>
+            <div class="modal-footer">
+                <button type="submit" class="waves-effect waves-light btn red darken-2">Sign up</button>
+                <a href="#!" class="modal-close waves-effect red darken-2 btn">Close</a>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+<script src="./js/firebaseAuth.js"></script>
+<% include partials/footer.ejs %>

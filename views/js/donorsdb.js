@@ -31,7 +31,7 @@ function createDonor(doc) {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    if (form.number.value.length == 11 ){
+    if (form.number.value.length == 11) {
         firebase.firestore().collection('donors').add({
             name: form.name.value,
             contact: form.number.value,

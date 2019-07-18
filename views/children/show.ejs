@@ -6,43 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Rescuing The Rescued</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" rel="stylesheet" media="screen" href="css/styles.css">
-    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" media="screen" href="styles2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified CSS -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.carousel');
-            M.Carousel.init(elems);
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.fixed-action-btn');
-            M.FloatingActionButton.init(elems);
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.collapsible');
-            M.Collapsible.init(elems);
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.scrollspy');
-            M.ScrollSpy.init(elems);
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.modal');
-            M.Modal.init(elems);
-        });
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.datepicker');
-            M.Datepicker.init(elems);
-        });
-    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
 </head>
 
 <body>
@@ -52,9 +21,9 @@
         <div class="">
             <nav class="nav-wrapper">
                 <div class="navbar-links center-align">
-                    <ul class=" nav-ul ">
-                        <li><a href="/login">Report Case</a></li>
+                    <ul class="nav-ul">
                         <li><a href="/">Home</a></li>
+                        <li><a href="/login">Report Case</a></li>
                         <li><a href="/child">Chidren</a></li>
                         <li><a href="/login">Signup</a></li>
                         <li><a href="/login" class="waves-effect waves-light btn-large donate-button">Donate</a></li>
@@ -65,81 +34,67 @@
     </header>
     <div class=" fake-div1 #212121 red darken-2 "></div>
     <div class=" fake-div2 #212121 red darken-2 "></div>
-    
-<br>
-<br>
-<div class="container">
-    <div class="row valign-wrapper">
-        <div class="col l8 offset-l2 m12 s12">
-            <img src="images/data2.jpg" alt="" class="responsive-img">
+
+    <br>
+    <br>
+    <div class="container">
+        <div class="row valign-wrapper">
+            <div class="col l6 offset-l3 m12 s12">
+                <img class="responsive-img" src="<%=url%>" alt="">
+            </div>
         </div>
     </div>
-</div>
-</div>
-
-
-<div class="container data-wrapper text-align:center-align">
-
-
-
-        <ul class="collection with-header">
-                <li class="collection-header">
-                        <div class="row">
-                                <div class="col l2 m3 s3 offset-l2 offset-m1 offset-s1 data-div"><span> </span></div>
-                                <div class="col l6 m6 s5 data-text-div"><span id="data-child-name"></span><br></div>
-                            </div><h4 style="color: brown"><%=name%></h4></li>
-                <li class="collection-item">
-                        <div class="row">
-                                <div class="col l2 m3 s3 offset-l2 offset-m1 offset-s1 data-div"><span> <em>CHILD AGE:</em> <%=age%></span></div>
-                                <div class="col l6 m6 s5 data-text-div"><span id="data-child-age"></span><br></div>
-                            </div>
-                </li>
-                <li class="collection-item"><div class="row">
-                        <div class="col l2 m3 s3 offset-l2 offset-m1 offset-s1 data-div"> <em>CHILD DOB :</em> <span><%=dob%></span></div>
-                        <div class="col l6 m6 s5 data-text-div"><span id="data-child-dob"></span><br></div>
-                    </div></li>
-                <li class="collection-item"><div class="row">
-                        <div class="col l2 m3 s3 offset-l2 offset-m1 offset-s1 data-div"><span>CHILD CITY: <%=city%></span></div>
-                        <div class="col l6 m6 s5 data-text-div"><span id="data-child-city"></span><br></div>
-                    </div></li>
-                <li class="collection-item"><div class="row">
-                        <div class="col l2 m3 s3 offset-l2 offset-m1 offset-s1 data-div"><span>SUMMARY :<%=desc%></span></div>
-                        <div class="col l5 m6 s5 data-text-div"><span id="data-child-summary"></span><br></div>
-                    </div></li>
-                    <li class="collection-item">
-                            <div class="row thumbnail">
-                                    <div class="col l2 m3 s3 offset-l2 offset-m1 offset-s1 data-div"><img class="responsive-img"src="<%=url%>" alt=""></div>
-                            </div>
-                    </li>
-              </ul>
-
-</div>
-
-
-<!-- FOOTER -->
-<footer>
-    <div class="dot-div"></div>
-    <div class="black-text footer-div center-align">
-
-        <ul>
-            <li><a class="footer-link">Contact Us </a> | </li>
-            <li><a class="footer-link">Call Charges </a> | </li>
-            <li><a class="footer-link">Using your online account </a> | </li>
-            <li><a class="footer-link">Site maps </a> | </li>
-            <li><a class="footer-link">Terms and Conditions </a> | </li>
-            <li><a class="footer-link">Cookies </a> | </li>
-            <li><a class="footer-link">Freedom of information </a> | </li>
-            <li><a class="footer-link">Equality and diversity </a></li>
-        </ul>
     </div>
-    <div class=" dot-div"></div>
-    <div class="footer-copyright">
-        <div class="container center-align">
-            © 2019 Copyright Text Made By <span class="red-text"> Javeria Nadeem </span>, <span class="red-text">
-                Qandeel Asif </span> and <span class="red-text"> Yasir </span>
+
+
+    <div class="container data-wrapper">
+        <div class="row">
+            <div class="col l2 m3 s3 offset-l2 offset-m1 offset-s1 data-div"><span>Name : </span></div>
+            <div class="col l6 m6 s5 data-text-div"><span id="data-child-name"><%=name%></span><br></div>
+        </div>
+        <div class="row">
+            <div class="col l2 m3 s3 offset-l2 offset-m1 offset-s1 data-div"><span>Child Age :</span></div>
+            <div class="col l6 m6 s5 data-text-div"><span id="data-child-age"><%=age%></span><br></div>
+        </div>
+        <div class="row">
+            <div class="col l2 m3 s3 offset-l2 offset-m1 offset-s1 data-div"><span>Child DOB :</span></div>
+            <div class="col l6 m6 s5 data-text-div"><span id="data-child-dob"><%=dob%></span><br></div>
+        </div>
+        <div class="row">
+            <div class="col l2 m3 s3 offset-l2 offset-m1 offset-s1 data-div"><span>Child City :</span></div>
+            <div class="col l6 m6 s5 data-text-div"><span id="data-child-city"><%=city%></span><br></div>
+        </div>
+        <div class="row">
+            <div class="col l2 m3 s3 offset-l2 offset-m1 offset-s1 data-div"><span>Summary :</span></div>
+            <div class="col l5 m6 s5 data-text-div"><span id="data-child-summary"><%=desc%></span><br></div>
         </div>
     </div>
-</footer>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="dot-div"></div>
+        <div class="black-text footer-div center-align">
+
+            <ul>
+                <li><a class="footer-link">Contact Us </a> | </li>
+                <li><a class="footer-link">Call Charges </a> | </li>
+                <li><a class="footer-link">Using your online account </a> | </li>
+                <li><a class="footer-link">Site maps </a> | </li>
+                <li><a class="footer-link">Terms and Conditions </a> | </li>
+                <li><a class="footer-link">Cookies </a> | </li>
+                <li><a class="footer-link">Freedom of information </a> | </li>
+                <li><a class="footer-link">Equality and diversity </a></li>
+            </ul>
+        </div>
+        <div class=" dot-div"></div>
+        <div class="footer-copyright">
+            <div class="container center-align">
+                © 2019 Copyright Text Made By <span class="red-text"> Javeria Nadeem </span>, <span class="red-text">
+                    Qandeel Asif </span> and <span class="red-text"> Yasir </span>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
