@@ -5,7 +5,7 @@ var express = require("express"),
     admin = require("firebase-admin"),
 
     serviceAccount = require('./rescuing-the-rescued-firebase-adminsdk-9t73e-dcf8a33610.json');
-
+const port = process.env.PORT|| 3000;
 var firebaseAdmin = admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
     databaseURL: 'https://rescuing-the-rescued.firebaseio.com'
@@ -98,6 +98,6 @@ function isLoggedIn(req, res, next) {
 }
 
 //LISTENER PORT
-app.listen(3000, function () {
-    console.log("Server started");
+app.listen(port, () => {
+    console.log("Server started on port" + port);
 });

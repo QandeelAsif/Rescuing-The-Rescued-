@@ -5,7 +5,7 @@ function createCase(doc) {
     addCase.innerHTML = addCase.innerHTML + `<div class="col l4 m6 s12">
     <div class="card hoverable">
         <div class="card-image">
-            <img src = "${doc.data().image}">
+            <img src = "${doc.data().image}" class="responsive-img  card-img">
         </div>
         <div class="card-content">
             <span class="card-title">${doc.data().name}</span>
