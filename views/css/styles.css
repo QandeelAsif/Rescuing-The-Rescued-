@@ -72,30 +72,15 @@
     width:350px;
     height: 240px;
 }
-.missing-kid-3 {
-    width:400px;
-    height: 290px;
-}
 .missing-kid-4 {
     width:400px;
     height: 250px;
 }
-.missing-kid-5 {
+.missing-kid-5, .missing-kid-6, .missing-kid-7, .missing-kid-8, .missing-kid-3 {
     width:400px;
     height: 290px;
 }
-.missing-kid-6 {
-    width:400px;
-    height: 290px;
-}
-.missing-kid-7 {
-    width:400px;
-    height: 290px;
-}
-.missing-kid-8 {
-    width:400px;
-    height: 290px;
-}
+
 .collapsible-header {
     display: block !important;
     font-size: 18px;
@@ -348,6 +333,22 @@ label {
   padding-right: 3%;
   padding-left: 3%;
 }
-.card-img {
-  height: 300px !important;
+@media only screen and (max-width: 375px) {
+  .missing-kid-2,  .missing-kid-3 , .missing-kid-4, .missing-kid-5, .missing-kid-6, .missing-kid-7,
+   .missing-kid-8, .missing-kid-1 {
+    width: 200px;
+    height: 150px;
+  }
+  .become-donor {
+    margin-top: 5px;
+  }
+  #google-signin {
+    margin-top: 5px;
+  }
+  
+}
+@media only screen and (max-width: 492px) {
+  #sign-in-stuff, .welcome {
+    margin-top: 13%;
+  }
 }
