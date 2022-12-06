@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/QandeelAsif/Rescuing-The-Rescued-#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "ejs": "^2.6.2",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "firebase-admin": "^8.2.0",
     "materialize-css": "^1.0.0-rc.2",
     "morgan": "^1.9.1"
